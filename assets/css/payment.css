@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+	background-color: #27163b;
+	color: white;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #111111;
+    box-shadow: inset 0 0 1px 1px #3d3d3d;
+}
+
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.justify{
+    justify-content: center;
+}
+.align{
+    align-items: center;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.container_payment{
+    margin-top: 20px;
+    width: 75.2%;
+}
+
+.option{
+    display: flex;
+    background: #1ED760;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+    padding: 12px 15px;
+    cursor: pointer;
+    border: 2px solid lightgrey;
+}
+.option .dot{
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+.option .dot::before{
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: #1ED760;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+input[type="radio"]{
+    display: none;
+}
+#option-1:checked:checked ~ .option-1{
+    background: #1ED760;
+    background: linear-gradient(135deg, #1ED760 0%, #2be76d 100%);
+    border: 0;
+}
+#option-1:checked:checked ~ .option-1 .dot{
+    background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.option span{
+    position: relative;
+    left: 20px;
+    top: 1px;
+    font-family: 'Ruda';
+    font-size: 20px;
+    color: #808080;
+    font-size: 16px;
+}
+#option-1:checked:checked ~ .option-1 span{
+    color: #fff;
+}
+
+.container{
+    min-width: 350px;
+    width: 50vw;
+    height: 63vh;
+    background-color: #131313;
+    border-radius: 5px;
+}
+
+.title{
+    font-family: 'Ruda';
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+form{
+    padding: 10px 50px;
+    width: 100%;
+    height: 80%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.field_name{
+    font-family: 'Ruda';
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+input{
+    height: 40px;
+    border-radius: 3px;
+    outline: transparent;
+    border: 0;
+    background-color: rgb(163, 163, 163);
+    color: black;
+    font-family: 'Ruda';
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+#discord{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+
+    width: 100% !important;
+}
+#tag{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    width: 20%;
+}
+#hastag{
+    position: relative;
+    top: 6px;
+    left: -55px;
+}
+
+
+.box1{
+    width: 90%;
+    height: 100px;
+    padding: 0px 10px;
+}
+
+.box2{
+    width: 90%;
+    height: 100px;
+}
+
+.box2 .perg{
+    flex: 1;
+    margin: 0px 10px;
+}
+
+.submit{
+    margin-top: 10px;
+    width: 50%;
+    height: 40px;
+    background: #1ED760;
+    color: white;
+    font-size: 18px;
+    font-family: 'Ruda';
+    padding: 5px;
+    text-align: center;
+}
+
+.termos{
+    font-family: 'Ruda';
+    color: #d9d9d9;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.termos a{
+    color: #d9d9d9;
+}
+
+@media only screen and (min-width:300px) and (max-width:1100px){
+    input{
+        height: 35px;
+    }
+    .container{
+        height: 90vh;
+    }
+    .box1{
+        width: 113%;
+    }
+    .box2{
+        width: 113%;
+        flex-direction: column;
+    }
+    .box2 .perg{
+        width: 92%;
+    }
+
+}

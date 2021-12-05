@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+*::selection{
+	background-color: #27163b;
+	color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #111111;
+    box-shadow: inset 0 0 1px 1px #3d3d3d;
+}
+
+.container {
+    width: 90%;
+    justify-content: center;
+}
+
+header {
+    padding-top: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+body{
+    /*
+    background-image: url('../img/background2.png');
+    background-position: center;
+    background-size: cover;
+    */
+    background-color: #000;
+    height: 100vh;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo, header .logo a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Ruda', cursive;
+    font-size: 30px;
+}
+
+header .logo:hover {
+    transform: scale(1.2);
+    transition: .4s;
+}
+
+header .logo:not(hover) {
+    transform: scale(1);
+    transition: .4s;
+}
+
+header .menu_mobile{
+    display: none;
+}
+
+.menu_mobile .menu_bar{
+    transition: 0.5s;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.menu_icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    right: 5%;
+    transition: 0.5s;
+}
+
+.menu_bar {
+    background-color: black;
+    width: 40px;
+    margin-bottom: 9px;
+    height: 4px;
+    border-radius: 10px;
+    display: none;
+}
+
+.menu_mobile, .menu_mobile ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li .bar{
+    transition: 1s;
+}
+
+header nav ul li a{
+    font-family: 'Ruda', sans-serif;
+    text-decoration: none;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 15px;
+    letter-spacing: 1px;
+}
+
+
+header nav ul li:hover .bar {
+    width: 80%;
+    margin: 0 auto;
+    height: 10%;
+    background-color: white;
+    transition: 1s;
+}
+
+.produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #252525;
+}
+
+.prod_logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.prod_logo img {
+    width: 300px;
+    user-select: none;
+}
+
+.box_prod{
+    width: 300px;
+    height: 450px;
+    margin: 0 20px;
+    margin-top: 45px;
+    background-color: #202020;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.463);
+}
+
+.box_prod:hover {
+    box-shadow: 0px 0px 20px rgba(55, 55, 55, 0.163);
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+
+.box_prod:not(hover) {
+    box-shadow: 0px 0px 10px rgba(55, 55, 55, 0.163);
+    transform: scale(1.0);
+    transition: 0.5s;
+}
+
+.box_prod img {
+    border-radius: 10px 10px 0 0;
+    margin-top: -1px;
+    width: calc(100% + 1px);
+    height: calc(200px + 1px);
+}
+
+.title_prod{
+    font-family: 'Ruda', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+#menor{
+    font-size: 20px;
+}
+
+.valor_prod {
+    font-size: 40px;
+    font-family: 'Ruda', cursive;
+    text-align: center;
+    font-weight: 200;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.prod{
+    font-family: 'Ruda', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 180px;
+    box-shadow: 0px 0px 6px #222;
+    cursor: pointer;
+}
+
+.prod:not(hover){
+    transition: .3s;
+}
+
+
+.outros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.prod_logo_outros{
+    margin: 20px 0;
+    font-size: 100px;
+    color: white;
+    font-family: 'Ruda';
+    user-select: none;
+}
+
+
+#menor{
+    font-size: 20px;
+}
+
+.outros .box_prod img{
+    height: 250px;
+}
+
+
+
+.outros .box_prod .title_prod, .outros .box_prod .valor_prod{
+    margin-top: 10px;
+}
+
+.prod{
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.prod:hover{
+    color: white;
+    background-color: #333;
+    transition: .3s;
+}
+
+.outros .menor img{
+    height: 200px;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.justify{
+    justify-content: center;
+}
+.align{
+    align-items: center;
+}
+
+footer{
+    margin-top: 100px;
+    width: 100%;
+    height: 100px;
+    background-color: #050505;
+}
+
+footer .container{
+    width: 90%;
+    height: 100%;
+    text-align: center;
+}
+
+footer h1, footer h2{
+    font-family: 'Ruda';
+    font-size: 100%;
+    color: #818181;
+}
+
+footer h1{
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:560px){
+    .prod_logo{
+        margin-top: 40px;
+        font-size: 50px;
+    }
+}

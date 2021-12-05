@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>CHECKOUT | Black Market</title>
+    <link rel="stylesheet" href="./assets/css/payment.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Ruda:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/p1nto.png">
+    <link rel="stylesheet" href="./assets/scripts/css/alertify.min.css" />
+    <link rel="stylesheet" href="./assets/scripts/css/themes/default.min.css" />
+</head>
+<body class="flex column align justify" onload="get_prod()">
+    <h1 class="title">Chekcout: $00.00</h1>
+    <div class="container flex column align justify">
+        <div class="container_payment flex column justify">
+            <h2 class="field_name">Form of Payment:</h2>
+            <div class="payment_type">
+                <input type="radio" name="select" id="option-1" checked>
+                <input type="radio" name="select" id="option-2">
+                <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>Paypal</span>
+                </label>
+            </div>
+        </div>
+
+        <form name="contact" id="form" method="POST" data-netlify="true" class="flex column align">
+            <div class="box1 flex column justify">
+                <h2 class="field_name">Products:</h2>
+                <input type="text" name="prods" id="prods" class="inputs inputs_t" autocomplete="off">
+            </div>
+            <div class="box2 flex align justify">
+                <div class="perg flex column justify">
+                    <h2 class="field_name">Nick:</h2>
+                    <input type="text" name="nick" id="nick" class="inputs inputs_t" autocomplete="off">
+                </div>
+                <div class="perg flex column justify">
+                    <h2 class="field_name">Discord:</h2>
+                    <div class="disc_inp flex">
+                        <input type="text" name="discord" id="discord" class="inputs inputs_t" autocomplete="off">
+                        <input type="text" name="tag" id="tag" class="inputs inputs_t" autocomplete="off" maxlength="4">
+                        <h2 id="hastag">#</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="captcha" data-netlify-recaptcha="true"></div>
+            <input class="submit" type="button" value="Buy Now!">
+            <h2 class="termos">When you click the button, you agree with our <a href="termos.html" target="_blank">terms and conditions</a></h2>
+        </form>
+    </div>
+    <script src="./assets/scripts/alertify.min.js"></script>
+    <script src="./assets/scripts/prod.js"></script>
+</body>
+</html>

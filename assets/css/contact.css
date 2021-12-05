@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.justify{
+    justify-content: center;
+}
+.align{
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+*::selection{
+	background-color: #27163b;
+	color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #111111;
+    box-shadow: inset 0 0 1px 1px #3d3d3d;
+}
+
+body {
+    background-color: #dfdfdf;
+    overflow-x: hidden;
+}
+
+.banner  {
+    /*
+    background-image: url('../img/background2.png');
+    background-position: center;
+    background-size: cover;
+    */
+    background-color: black;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    justify-content: center;
+}
+
+header {
+    padding-top: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo, header .logo a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Ruda', cursive;
+    font-size: 30px;
+}
+
+header .logo:hover {
+    transform: scale(1.2);
+    transition: .4s;
+}
+
+header .logo:not(hover) {
+    transform: scale(1);
+    transition: .4s;
+}
+
+header .menu_mobile{
+    display: none;
+}
+
+.menu_mobile .menu_bar{
+    transition: 0.5s;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.menu_icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    right: 5%;
+    transition: 0.5s;
+}
+
+.menu_bar {
+    background-color: white;
+    width: 40px;
+    margin-bottom: 9px;
+    height: 4px;
+    border-radius: 10px;
+    display: none;
+}
+
+.menu_mobile, .menu_mobile ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li a{
+    font-family: 'Ruda', sans-serif;
+    text-decoration: none;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 15px;
+    letter-spacing: 1px;
+}
+
+header nav ul li:hover .bar {
+    width: 80%;
+    margin: 0 auto;
+    height: 10%;
+    background-color: white;
+    transition: 1s;
+}
+
+header nav ul li:not(hover) .bar{
+    transition: 1s;
+}
+
+
+main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-weight: 200;
+    font-family: 'Ruda', cursive;
+    font-size: 35px;
+}
+
+@media only screen and (min-width:560px) and (max-width:800px){
+    header nav {
+        display: none;
+    }
+
+    header .menu_mobile{
+        display: flex;
+    }
+
+    .menu_mobile ul li a{
+        font-size: 30px;
+    }
+
+    .menu_icon{
+        display: flex;
+        z-index: 10;
+    }
+
+    .menu_bar{
+        display: block;
+    }
+
+    
+
+    .menu_mobile ul li{
+        padding-bottom: 25px;
+    }
+    
+    .menu_mobile ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu_mobile ul #first {
+        margin-top: 50%;
+    }
+
+    .menu_mobile{
+        position: absolute;
+        top: 0%;
+        right: -100%;
+        transition: .5s;
+        width: 35%;
+        height: 100vh;
+        background-color: black;
+    }
+    
+    .active{
+        position: absolute;
+        right: 0%;
+        transition: .5s;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:560px){
+    header nav {
+        display: none;
+    }
+
+    header .menu_mobile{
+        display: flex;
+    }
+
+    .banner2{
+        margin-top: 45%;
+    }
+
+    .banner2_title h1 {
+        font-size: 40px;
+    }
+    
+    .banner2_title h2 {
+        font-size: 25px;
+    }
+
+    .imvu{
+        margin-top: 50px;
+        width: 100px;
+    }
+
+    .logo a {
+        font-size: 25px !important;
+    }
+
+    .menu_icon{
+        display: flex;
+        z-index: 10;
+    }
+
+    .menu_bar{
+        display: block;
+    }
+
+
+    .menu_mobile ul li{
+        padding-bottom: 25px;
+    }
+    
+    .menu_mobile ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu_mobile ul #first {
+        margin-top: 50%;
+    }
+
+    .menu_mobile{
+        position: absolute;
+        top: 0%;
+        right: -100%;
+        transition: .5s;
+        width: 35%;
+        height: 100vh;
+        background-color: black;
+    }
+    
+    .active{
+        position: absolute;
+        right: 0%;
+        transition: .5s;
+    }
+}
